@@ -1,0 +1,131 @@
+$bg-color: #72ffd4;
+$bg-input-color: white;
+$keypad-color: #403f3c;
+$keypad-column-color: #71706d;
+$ripple-color: #84837f;
+$font-digits-color: white;
+$font-input-color: #71706d;
+$font-result-color: #959492;
+$keypad-spacing: 100%;
+$breakpoint-mobile: 400px;
+$main-width: 380px;
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight:100;
+    background-color: $bg-color;
+}
+
+button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    color: $font-digits-color;
+    background-color: $keypad-color;
+    margin: 8px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+}
+
+main{
+    width: 100%;
+    max-width: 100%;
+}
+
+.calculator{
+    background-color: $keypad-color;
+    width: $main-width;
+    text-align: center;
+        margin: 0 auto;
+}
+.keypad{
+    width: $keypad-spacing;
+    margin: 0 auto;
+    display: flex;
+}
+.keypad-col-1{
+    width: 80%;
+    padding: 20px 0;
+}
+
+.keypad-col-2{
+    flex-direction: column;
+    width: 20%;
+    padding: 20px 0;
+    background-color: $keypad-column-color;
+    button{
+        font-size: 1.2em;
+        background-color: $keypad-column-color;
+        padding: 13px 10px;
+    }
+
+}
+.display{
+    padding: 20px 10px;
+    background-color:$bg-input-color;
+}
+
+#result{
+    text-align: right;
+    color: $font-result-color;
+    height: 48px;
+    margin: 0;
+    padding: 30px 0 0 0;
+    font-weight: 300;
+    font-size: 2.2em;
+}
+input{
+    text-align: right;
+    color: $font-input-color;
+    width: $keypad-spacing;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    outline: none;
+    border: none;
+}
+
+.author{
+    width: $main-width;
+    text-align: center;
+    margin: 0 auto;
+    p{
+        font-weight: 300;
+        color: $keypad-color;
+    }
+}
+
+
+.ripple {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: $ripple-color;
+    transform: scale(0);
+    position: absolute;
+    opacity: 1;
+}
+
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .calculator, .author{
+        width: 100%
+    }
+
+
+}
+
+
+
