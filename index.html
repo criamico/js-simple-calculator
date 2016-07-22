@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Js Calculator</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+
+
+    <main>
+       <div class="calculator">
+            <div class="display">
+                <input name="display" readonly>
+                <h2 id="result"> </h2>
+            </div>
+
+            <div class="keypad">
+                <div class="keypad-col-1">
+                    <div class="row-789">
+                        <button class="key-val" name='key7' value='7'>7</button>
+                        <button class="key-val" name='key8' value='8'>8</button>
+                        <button class="key-val" name='key9' value='9'>9</button>
+                    </div>
+                     <div class="row-456">
+                        <button class="key-val" name='key4' value='4'>4</button>
+                        <button class="key-val" name='key5' value='5'>5</button>
+                        <button class="key-val" name='key6' value='6'>6</button>
+                    </div>
+                    <div class="row-456">
+                        <button class="key-val" name='key1' value='1'>1</button>
+                        <button class="key-val" name='key2' value='2'>2</button>
+                        <button class="key-val" name='key3' value='3'>3</button>
+                    </div>
+                    <div class="row-0">
+                        <button class="key-val" name='key_dot' value='.'>.</button>
+                        <button class="key-val" name='key0' value='0'>0</button>
+                        <button class="key-eq" name='key_equal' value='='>=</button>
+                    </div>
+                </div>
+
+                <div class='keypad-col-2'>
+                    <button class="key-op" id = "key_del" name='key_delete' value='AC'>DEL</button>
+                    <button class="key-op" name='key_divide' value='÷'>÷</button>
+                    <button class="key-op" name='key_multiply' value='×'>×</button>
+                    <button class="key-op" name='key_subtract' value='-'>-</button>
+                    <button class="key-op" name='key_sum' value='+'>+</button>
+                </div>
+            </div>
+        </div><!-- calculator -->
+        <div class="author">
+            <p>Created by <a href="https://github.com/criamico">criamico</a> - 2016</p>
+        </div>
+    </main>
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
