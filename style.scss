@@ -19,7 +19,7 @@ body{
 
 button{
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: $font-digits-color;
     background-color: $keypad-color;
     margin: 8px;
@@ -46,13 +46,13 @@ main{
 }
 .keypad-col-1{
     width: 80%;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .keypad-col-2{
     flex-direction: column;
     width: 20%;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: $keypad-column-color;
     button{
         font-size: 1.2em;
@@ -71,7 +71,7 @@ main{
     color: $font-result-color;
     height: 48px;
     margin: 0;
-    padding: 30px 0 0 0;
+    padding: 20px 0 0 0;
     font-weight: 300;
     font-size: 2.2em;
 }
