@@ -1,3 +1,6 @@
+/*js-Simple-calculator*/
+/*author: Cristina Amico*/
+/*running calculator capable of concatenate expressions*/
 (function(){
     'use strict';
 
@@ -5,7 +8,7 @@
 
         // module that implements the calculator
         function calculator(){
-            let display = {
+            var display = {
                     input: '',
                     result: ''
                 },
@@ -23,7 +26,7 @@
                 // if equal is pressed, the result is moved to the input area and the loop starts again
                 if ( d === '='){
                     isTyping = false;
-                    display.input = expr.result;
+                    display.input = display.result; //expr.result;
                     display.result= '';
 
                     // console.log(expr.result);
@@ -47,7 +50,10 @@
                     isTyping = true;
                     display.input += d;
                     expr = getExpression(display.input);
-                    display.result = expr.result.toString();
+                    if (expr.result.toString() === 'Infinity')
+                        display.result = '∞';
+                    else
+                        display.result = expr.result.toString();
                 }
                 return display;
             }
@@ -79,7 +85,7 @@
 
             //discriminate numbers and signs by using a regex
             function getExpression(str){
-                let newExpr = {
+                var newExpr = {
                     strOperands : [],
                     operands : [],
                     operation : [],
@@ -170,6 +176,7 @@
                 $('#key_del').text('CLR');
             else
                 $('#key_del').text('DEL');
+
 
 
             // add ripple effect on keys
