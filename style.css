@@ -69,6 +69,7 @@ input {
   text-align: right;
   color: #71706d;
   width: 100%;
+  max-width: 100%;
   font-size: 3em;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
